@@ -15,4 +15,4 @@ def func3(x,y,z=0):
     y = verticalmove(y)
     x = horizontalmove(x)
     return [x,y,z]
-print(func3(1,1,0))
+print(func3(1,1))
