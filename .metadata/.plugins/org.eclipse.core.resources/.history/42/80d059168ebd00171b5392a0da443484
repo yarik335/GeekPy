@@ -1,0 +1,39 @@
+'''
+ну і традиційно -> калькулятор :) повинна бути 1 ф-ція яка б 
+приймала 3 аргументи - один з яких операція яку зробити!
+'''
+
+def calc(x,o,y):
+    try:
+        x = float(x)
+    except ValueError:
+        print("First's not an number!")
+        return False
+    try:
+        y = float(y)
+    except ValueError:
+        print("Second's not an number!")
+        return False    
+    if (o =='+'): return x + y
+    elif (o =='-'): return x - y
+    elif (o =='*'): return x * y
+    elif (o =='/'): return x / y
+    else : 
+        while True:
+            answer = input('Try again? (y/n): ')
+            if answer == 'y':
+                return True
+                break
+                
+            else:
+                print ('Goodbye')
+                return False 
+while True:
+    x = input("first number:").replace(" ", "")
+    o = input("operator:").replace(" ", "")
+    y = input("second number:").replace(" ", "")
+
+    print(x,y,o)
+    if (calc(x, o, y) == False):
+        break
+    print(calc(x, o, y))

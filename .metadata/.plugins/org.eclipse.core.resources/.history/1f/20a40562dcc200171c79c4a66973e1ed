@@ -1,0 +1,60 @@
+from random import randint
+from random import uniform
+import time
+
+def list_int(*args):
+    for i in range(0,100):
+            args[0].append(randint(0,99))
+def list_float(*args):
+    for i in range(0,100):
+        args[0].append(uniform(0,99))    
+def sel_sort(mylist):
+    for fillslot in range(len(mylist)-1,0,-1):
+        positionOfMax=0
+        for location in range(1,fillslot+1):
+            if mylist[location]>mylist[positionOfMax]:
+                positionOfMax = location
+
+    temp = mylist[fillslot]
+    mylist[fillslot] = mylist[positionOfMax]
+    mylist[positionOfMax] = temp
+
+    
+def ins_sort(mylist):
+    for index in range(1,len(mylist)): #берем от 1 потому что будем проверяем со зачение слева
+        value = mylist[index]
+        i = index - 1
+        while i >= 0:
+            if value < mylist[i]: # если значение меньше значения слева заменяем местами
+                mylist[i + 1] = mylist[i]
+                mylist[i] = value
+                i = i - 1 #декрементируем і и проверяем со значениями еще левее
+            else:
+                break
+                          
+    return mylist
+
+
+listint =[]
+listfloat =[]
+listtmp = []
+list_int(listint)
+list_float(listfloat)
+listintsort = list(listint)
+listfloatsort = list(listfloat)
+listintsort.sort()
+listfloatsort.sort()
+
+listtmp = list(listint)
+start = time.process_time()
+ins_sort(listtmp)
+elapsed = time.process_time()
+print("Egual to sort method:"+str(listintsort == listtmp),end = " ")
+print("time of insertion sort (list of integers):%0.4f" %((elapsed-start)*1000.0)+"ms")
+
+listtmp = list(listfloat)
+start = time.process_time()
+ins_sort(listtmp)
+elapsed = time.process_time()
+print("Egual to sort method:"+str(listfloatsort == listtmp),end = " ")
+print("time of insertion sort (list of floats):%0.4f" %((elapsed-start)*1000.0)+"ms")

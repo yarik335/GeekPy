@@ -1,0 +1,46 @@
+'''
+ну і традиційно -> калькулятор :) повинна бути 1 ф-ція яка б 
+приймала 3 аргументи - один з яких операція яку зробити!
+'''
+def repeatfunc():
+     while True:
+            print("You entered something wrong!")
+            answer = input('Try again? (y/n): ')
+            if answer == 'y':
+                return True
+                break
+                
+            else:
+                print ('Goodbye')
+                return False
+                break
+def calc(x,o,y):
+    try:
+        x = float(x)
+    except ValueError:
+        if(repeatfunc()):return True
+        else: return False
+    try:
+        y = float(y)
+    except ValueError:
+        if(repeatfunc()):return True
+        else: return False
+    if (o =='+'): return x + y
+    elif (o =='-'): return x - y
+    elif (o =='*'): return x * y
+    elif (o =='/'): return x / y
+    else : 
+        if(repeatfunc()):
+            return True
+        else: return False
+        
+while True:
+    x = input("first number:").replace(" ", "")
+    o = input("operator:").replace(" ", "")
+    y = input("second number:").replace(" ", "")
+
+    print(x,y,o)
+    if (calc(x, o, y) == False):
+        break
+    else: continue
+    print(calc(x, o, y))

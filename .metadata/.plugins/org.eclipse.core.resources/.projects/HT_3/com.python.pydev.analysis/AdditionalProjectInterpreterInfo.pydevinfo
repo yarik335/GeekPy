@@ -1,0 +1,23 @@
+-- VERSION_4
+-- START DISKCACHE_2
+/media/yarik335/Geekhub/gitrepo/.metadata/.plugins/org.eclipse.core.resources/.projects/HT_3/com.python.pydev.analysis/v2_indexcache
+HT_3|1509971517000000000|/media/yarik335/Geekhub/gitrepo/HT_3/HT_3.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=HT_3
+-- END DICTIONARY
+-- START TREE 1
+8
+bub|1|bubble_sort!10@
+ela|1|elapsed!11@
+gap|1|gapInsertionSort!10@
+ins|1|ins_sort!10@
+lis|7|list_float!10@listint!11@listfloat!11@listintsort!11@listfloatsort!11@list_int!10@listtmp!11@
+sel|1|sel_sort!10@
+she|1|shellSort!10@
+sta|1|start!11@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

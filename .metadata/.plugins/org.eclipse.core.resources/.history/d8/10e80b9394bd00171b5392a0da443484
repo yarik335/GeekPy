@@ -1,0 +1,64 @@
+'''
+ну і традиційно -> калькулятор :) повинна бути 1 ф-ція яка б 
+приймала 3 аргументи - один з яких операція яку зробити!
+'''
+
+
+
+"""function wich asking try again if something wrong"""
+def repeatfunc(): 
+    answer = ''
+    while (answer == ''):
+            print("You entered something wrong!")
+            answer = input('Try again? (y/n): ')
+            if (answer == 'y'):
+                return True
+                              
+            else:
+                print ('Goodbye')
+                return False
+                break
+"""calculator"""
+def calc(x,o,y):
+    """try is numbers are really numbers and convert them into float"""
+    try:
+        x = float(x)
+    except ValueError:
+        if(repeatfunc()):
+            return True
+        else: 
+            return False
+    try:
+        y = float(y)
+    except ValueError:
+        """check if repeat function returns True or False returns the 
+        same to main program"""
+        if(repeatfunc()):return True
+        else: return False
+        """check what operator was given"""
+    if (o =='+'): return print(x + y)
+    elif (o =='-'): return print(x - y)
+    elif (o =='*'): return print(x * y)
+    elif (o =='/'):
+        try:
+            return print(x / y)
+        except ZeroDivisionError:
+            print("You can't divide by 0!")
+            repeatfunc()
+
+    else : 
+        if(repeatfunc()):
+            return True
+        else: return False
+        
+while True:
+    x = input("first number:").replace(" ", "")
+    o = input("operator:").replace(" ", "")
+    y = input("second number:").replace(" ", "")
+
+    print(x,o,y,end=" = ")
+    if (calc(x, o, y) == False):
+        break
+    else: 
+        continue 
+       

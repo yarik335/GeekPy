@@ -1,0 +1,39 @@
+-- VERSION_4
+-- START DISKCACHE_2
+/media/yarik335/Geekhub/gitrepo/.metadata/.plugins/org.eclipse.core.resources/.projects/HT_2/com.python.pydev.analysis/v2_indexcache
+task5|1509370230000000000|/media/yarik335/Geekhub/gitrepo/HT_2/task5.py
+task6|1509961854000000000|/media/yarik335/Geekhub/gitrepo/HT_2/task6.py
+task7|1509383612000000000|/media/yarik335/Geekhub/gitrepo/HT_2/task7.py
+task1|1509295692000000000|/media/yarik335/Geekhub/gitrepo/HT_2/task1.py
+task2|1509304919000000000|/media/yarik335/Geekhub/gitrepo/HT_2/task2.py
+task3|1509356148000000000|/media/yarik335/Geekhub/gitrepo/HT_2/task3.py
+task4|1509360291000000000|/media/yarik335/Geekhub/gitrepo/HT_2/task4.py
+-- END DISKCACHE
+-- START DICTIONARY
+7
+5=task5
+3=task6
+1=task7
+6=task1
+7=task2
+2=task3
+4=task4
+-- END DICTIONARY
+-- START TREE 1
+12
+cal|1|calc!10@
+fun|7|func2!18@func4!18@func3!26@func1!18@func3!18@func!34@func!42@
+hor|1|horizontalmove!26@
+k|1|k!51@
+myf|1|myfunc!58@
+o|1|o!11@
+rep|1|repeatfunc!10@
+sea|3|season2!50@season3!50@season1!50@
+st|1|st!43@
+ver|1|verticalmove!26@
+x|1|x!11@
+y|1|y!11@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE
