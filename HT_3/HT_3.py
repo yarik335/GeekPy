@@ -136,7 +136,6 @@ shellSort(listtmp)
 elapsed = time.process_time()
 print("Egual to sort method:"+str(listfloatsort == listtmp),end = "")
 print(", time of Shell sort (list of floats):%0.4f" %((elapsed-start)*1000.0)+"ms")
-
 """
 Output 100000 elements:
 Egual to sort method:True, time of selection sort (list of integers):439642.9257ms
