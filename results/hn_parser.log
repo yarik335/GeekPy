@@ -1,0 +1,39 @@
+2017-11-28 18:26:03,358 - exampleApp - INFO - Program started
+2017-11-28 18:26:03,358 - exampleApp - INFO - Create Result folder
+2017-11-28 18:26:03,362 - exampleApp - INFO - Parameters accepted
+2017-11-28 18:26:03,362 - exampleApp - INFO - Send categories request.
+2017-11-28 18:26:04,058 - exampleApp - INFO - Received list of categories.
+2017-11-28 18:26:04,059 - exampleApp - INFO - Send item request.
+2017-11-28 18:26:04,760 - exampleApp - INFO - Item received.
+2017-11-28 18:26:04,761 - exampleApp - INFO - Send item request.
+2017-11-28 18:26:05,451 - exampleApp - INFO - Item received.
+2017-11-28 18:26:05,451 - exampleApp - INFO - Send item request.
+2017-11-28 18:26:06,156 - exampleApp - INFO - Item received.
+2017-11-28 18:26:06,156 - exampleApp - INFO - Send item request.
+2017-11-28 18:26:06,820 - exampleApp - INFO - Item received.
+2017-11-28 18:26:06,821 - exampleApp - INFO - Send item request.
+2017-11-28 18:26:06,821 - exampleApp - ERROR - Connection fails.
+2017-11-28 18:26:06,822 - exampleApp - INFO - Send item request.
+2017-11-28 18:26:07,518 - exampleApp - INFO - Item received.
+2017-11-28 18:26:07,519 - exampleApp - INFO - Send item request.
+2017-11-28 18:26:08,189 - exampleApp - INFO - Item received.
+2017-11-28 18:26:08,190 - exampleApp - INFO - Send item request.
+2017-11-28 18:26:08,855 - exampleApp - INFO - Item received.
+2017-11-28 18:26:08,856 - exampleApp - INFO - Send item request.
+2017-11-28 18:26:09,529 - exampleApp - INFO - Item received.
+2017-11-28 18:26:09,529 - exampleApp - INFO - Send item request.
+2017-11-28 18:26:10,184 - exampleApp - INFO - Item received.
+2017-11-28 18:26:10,184 - exampleApp - INFO - Send item request.
+2017-11-28 18:26:10,856 - exampleApp - INFO - Item received.
+2017-11-28 18:26:10,856 - exampleApp - INFO - Send item request.
+2017-11-28 18:26:11,534 - exampleApp - INFO - Item received.
+2017-11-28 18:26:11,535 - exampleApp - INFO - Send item request.
+2017-11-28 18:26:12,209 - exampleApp - INFO - Item received.
+2017-11-28 18:26:12,210 - exampleApp - INFO - Send item request.
+2017-11-28 18:26:13,057 - exampleApp - INFO - Item received.
+2017-11-28 18:26:13,058 - exampleApp - INFO - Send item request.
+2017-11-28 18:26:13,769 - exampleApp - INFO - Item received.
+2017-11-28 18:26:13,769 - exampleApp - INFO - Send item request.
+2017-11-28 18:26:14,440 - exampleApp - INFO - Item received.
+2017-11-28 18:26:14,442 - exampleApp - INFO - report file created.
+2017-11-28 18:26:14,444 - exampleApp - INFO - Program ends.
