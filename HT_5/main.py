@@ -1,20 +1,21 @@
-import urllib.request
-import urllib.error
-import json
 import argparse
-import logging
-import os
 import csv
 import datetime
-from Config import list_url
-from Config import item_url
-from Config import categories
-from Config import default_category
-from Config import result_directory_name
-from Config import log_file_name
-from Config import report_file_name
-from Config import from_date
-from Config import score
+import json
+import logging
+import os
+import urllib.error
+import urllib.request
+
+from HT_5.Config import categories
+from HT_5.Config import default_category
+from HT_5.Config import from_date
+from HT_5.Config import item_url
+from HT_5.Config import list_url
+from HT_5.Config import log_file_name
+from HT_5.Config import report_file_name
+from HT_5.Config import result_directory_name
+from HT_5.Config import score
 
 
 # using for create request url
