@@ -15,6 +15,7 @@ def uniq_elements(list):#make new list of unique elements of args list
     seen = set()
     result = []
     for item in list:
+
         if item[2] not in seen:
             result.append(item)
             seen.add(item[2])
