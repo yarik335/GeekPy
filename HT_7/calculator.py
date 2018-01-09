@@ -97,7 +97,7 @@ def main():
     c.addition(22, 22)
     c.division(22, 22)
     c.show_last_operation()
-    c.clear_all_results()
+    #c.clear_all_results()
 
 
 
