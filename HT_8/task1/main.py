@@ -1,7 +1,6 @@
 import json
 import requests
 from bs4 import BeautifulSoup
-from pprint import pprint
 import pandas as pd
 import csv
 
@@ -9,34 +8,39 @@ url = "http://quotes.toscrape.com"
 
 
 def get_html(url):
+    """ Function to get soup of given url"""
+
     r = requests.get(url=url)
     soup = BeautifulSoup(r.content, "html.parser")
     return soup
 
 
 def write_to_csv(value, file_csv):
+    """Recursive function that add every list and dictionary item to csv file
+
+    Args:
+        value: expecting list or dictionary
+        file_csv: file where to write
+    """
+
     if isinstance(value, list):
         for i in value:
             write_to_csv(i, file_csv)
     elif isinstance(value, dict):
         writer = csv.writer(file_csv)
-        for key, d_value in value.items():
-            if isinstance(d_value, list):
+        for key, d_value in value.items():  # if value is dictionary go through it
+            if isinstance(d_value, list):  # if value on exact key is list
                 write_to_csv(d_value, file_csv)
-            elif isinstance(d_value, dict):
+            elif isinstance(d_value, dict):  # if value on exact key is list
                 write_to_csv(d_value, file_csv)
             else:
                 try:
                     writer.writerow([key, d_value])
-                except UnicodeEncodeError:
+                except UnicodeEncodeError:  # for file opened in utf-8 this error is useless
                     writer.writerow([key, d_value])
-
     else:
         writer = csv.writer(file_csv)
-        try:
-            writer.writerow(value)
-        except UnicodeEncodeError:
-            writer.writerow(value)
+        writer.writerow(value)
 
 
 def get_author_url(quote, url):
@@ -44,9 +48,15 @@ def get_author_url(quote, url):
 
 
 def get_author(author_url, author_name):
+    """Function returns dictionary author
+
+        Args:
+        author_url: str url for request
+        author_name: str
+    """
     global unique_authors
     global author_id
-    if author_name in unique_authors:
+    if author_name in unique_authors:  # if hasn't requested that do request
         return unique_authors[author_name]
     else:
         author_request = requests.get(author_url)
@@ -63,15 +73,21 @@ def get_author(author_url, author_name):
 
 
 def get_tag(tag_name, tag_url):
+    """Return information about one tag
+
+        Args:
+        tag_name: string
+        tag_url: string
+    """
     global unique_tags
-    if tag_name in unique_tags:
+    if tag_name in unique_tags:  # if hasn't requested do request
         return unique_tags[tag_name]
     else:
         tag_has_next = True
         tag_count_pages = 1
         tag_next_page_url = tag_url
         tag_quotes = []
-        while tag_has_next:
+        while tag_has_next:  # pagination
             tag_r = requests.get(url=tag_next_page_url)
             tag_soup = BeautifulSoup(tag_r.content, "html.parser")
             for tag_quote in tag_soup.find_all("div", class_="quote"):
@@ -95,6 +111,7 @@ def get_tag(tag_name, tag_url):
 
 
 def get_tags(div_tags):
+    """:return list of quote tags"""
     tags = []
     for tag_name in div_tags.find_all("a", class_="tag"):
         tags.append(get_tag(tag_name.text, url + tag_name.get('href')))
@@ -108,6 +125,11 @@ def get_author_by_id(authors, a_id):
 
 
 def parse(soup):
+    """
+    Parse all necessary informaion
+    :param soup: html to parse (one page)
+    :return: list quotes of the page
+    """
     quotes_to_parse = soup.find_all('div', class_='quote')
     quotes = []
     for quote in quotes_to_parse:
@@ -126,10 +148,14 @@ author_id = 1
 
 
 def main():
+    """
+    main function of the parser
+      which make pagination and export data to files
+    :return: None
+    """
     has_next = True
     count_pages = 1
     next_page_url = url
-    count_id = 1
     while has_next:
         soup = get_html(next_page_url)
         records.append(parse(soup))
